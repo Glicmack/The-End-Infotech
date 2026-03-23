@@ -1,26 +1,381 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Custom Fonts */
+@font-face {
+  font-family: "Onest";
+  src: url("/fonts/Onest-VariableFont_wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TwidGrotesk";
+  src: url("/fonts/TwidGrotesk-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* THE END INFOTECH exact colors */
+  --color-background: #020202;
+  --color-foreground: #FFFFFF;
+  --color-card: #0F0F0F;
+  --color-card-hover: #161616;
+  --color-accent: #3B82F6;
+  --color-accent-hover: #60A5FA;
+  --color-red: #E70000;
+  --color-green: #79F3B6;
+  --color-grey: #3B3C3E;
+  --color-text-primary: rgba(255, 255, 255, 0.75);
+  --color-text-secondary: rgba(255, 255, 255, 0.7);
+  --color-text-muted: rgba(255, 255, 255, 0.4);
+  --color-border: rgba(255, 255, 255, 0.2);
+  --color-border-light: rgba(255, 255, 255, 0.1);
+  --color-surface: #0F0F0F;
+  --font-sans: "Onest", system-ui, sans-serif;
+  --font-display: "TwidGrotesk", system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #020202;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+::selection {
+  background: #FFF;
+  color: #000;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+/* THE END INFOTECH Headline font */
+.font-display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* THE END INFOTECH caption sizes */
+.caption-l {
+  font-family: var(--font-display);
+  font-size: clamp(4.125rem, -4.8224rem + 18.6404vw, 14.5rem);
+  line-height: 0.9em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.caption-m {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, -1.1316rem + 9.6491vw, 7.75rem);
+  line-height: 0.9em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.caption-s {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, -0.7368rem + 5.7018vw, 5rem);
+  line-height: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* THE END INFOTECH heading sizes */
+.h1 { font-size: clamp(2.75rem, 0.3421rem + 6.5789vw, 7rem); }
+.h2 { font-size: clamp(2.25rem, 1.2961rem + 3.2895vw, 4rem); }
+.h3 { font-size: clamp(2rem, 0.7368rem + 2.6316vw, 3.25rem); }
+.h4 { font-size: clamp(1.5rem, 0.8684rem + 1.3158vw, 2rem); }
+
+/* Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 30s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* SlideUp animation - THE END INFOTECH exact */
+@keyframes slide-up {
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.slideUp {
+  opacity: 0;
+  transform: translateY(4rem);
+}
+
+.slideUp.animated {
+  animation: 0.8s cubic-bezier(0.33, 1, 0.68, 1) 0s slide-up forwards;
+}
+
+/* Text gradient */
+.text-gradient {
+  background: linear-gradient(135deg, #3B82F6, #818CF8, #3B82F6);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* THE END INFOTECH button system */
+.btn {
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.btn-text {
+  position: relative;
+  z-index: 2;
+  transition: 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3rem;
+  padding: 0.875em 1.3125em;
+  white-space: nowrap;
+}
+
+.btn-icon {
+  position: relative;
+  z-index: 1;
+  transition: 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  flex-shrink: 0;
+}
+
+/* Button Primary - white bg */
+.btn-primary .btn-text {
+  background-color: #FFFFFF;
+  color: #020202;
+}
+.btn-primary .btn-icon {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+}
+.btn-primary:hover .btn-text {
+  background-color: #e0e0e0;
+}
+.btn-primary:hover .btn-icon {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Button Secondary - dark bg */
+.btn-secondary .btn-text {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.btn-secondary .btn-icon {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+}
+.btn-secondary:hover .btn-text {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Button Third - grey bg */
+.btn-third .btn-text {
+  background-color: #3B3C3E;
+  color: #FFFFFF;
+}
+.btn-third .btn-icon {
+  background-color: #3B3C3E;
+  color: #FFFFFF;
+}
+
+/* Heading faded */
+.heading-faded {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, -0.7368rem + 5.7018vw, 5rem);
+  font-weight: 400;
+  line-height: 1em;
+  color: rgba(255, 255, 255, 0.15);
+  text-transform: uppercase;
+}
+
+/* Horizontal separator - THE END INFOTECH exact */
+.h-separator {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Service hover animation */
+.service-item {
+  transition: all 0.3s ease;
+}
+.service-item:hover {
+  padding-left: 0.5rem;
+}
+
+/* Portfolio card hover */
+.portfolio-card {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-card:hover {
+  transform: translateY(-0.5rem);
+}
+
+/* Social icon hover - THE END INFOTECH exact */
+.social-icon {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.07);
+  transition: 0.3s ease;
+}
+.social-icon::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  border-radius: inherit;
+  background-color: #FFFFFF;
+  transition: height 0.3s ease;
+}
+.social-icon:hover::before {
+  height: 100%;
+}
+.social-icon:hover svg {
+  filter: invert(1);
+}
+.social-icon svg {
+  position: relative;
+  z-index: 1;
+  width: 40%;
+  height: 40%;
+  transition: 0.3s ease;
+}
+
+/* Link underline effect */
+.link-hover {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.3s ease;
+}
+.link-hover:hover {
+  text-decoration-color: currentColor;
+}
+
+/* Star block */
+.stars-row {
+  display: flex;
+  gap: 0;
+}
+
+/* Scrollbar - THE END INFOTECH style */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c2c2c2;
+  border-radius: 0.25rem;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #8d8d8d;
+}
+
+/* THE END INFOTECH container width */
+.container-rs {
+  width: 92.917vw;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+@media (max-width: 1199px) {
+  .container-rs {
+    width: 100%;
+    padding-inline: 1.5rem;
+  }
+}
+
+/* THE END INFOTECH scrolled header - glassmorphism */
+.header-scrolled {
+  border-radius: 3rem;
+  background-color: rgba(2, 2, 2, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding-inline: 2rem 0.75rem;
+  box-shadow:
+    2px 2px 1px -2px rgba(255, 255, 255, 0.35) inset,
+    -2px -2px 1px -2px rgba(255, 255, 255, 0.35) inset,
+    0 0 8px 0 rgba(150, 150, 150, 0.5) inset,
+    0 2px 8px 2px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+/* Project card info layout */
+.project-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.project-info-left {
+  flex-shrink: 0;
+}
+
+.project-info-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
 }

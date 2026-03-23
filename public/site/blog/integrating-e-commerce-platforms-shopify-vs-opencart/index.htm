@@ -1,0 +1,1075 @@
+﻿<!DOCTYPE html>
+<html lang="en_US">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Integrating E-commerce Platforms: Shopify vs. OpenCart</title>
+    <meta name="description" content="Compare Shopify vs OpenCart integrations and discover which e‑commerce platform best fits your business needs, features, scalability, and workflow.">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="theme-color" content="var(--clr-white)">
+        <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Integrating E-commerce Platforms: Shopify vs. OpenCart">
+    <meta property="og:description" content="Compare Shopify vs OpenCart integrations and discover which e‑commerce platform best fits your business needs, features, scalability, and workflow.">
+    <meta property="og:url" content="https://theendinfotech.com/blog/integrating-e-commerce-platforms-shopify-vs-opencart/">
+    <meta property="og:site_name" content="THE END INFOTECH">
+     
+        <meta property="og:image" content="https://theendinfotech.com/img/integrating-e-commerce-platforms-shopify-vs-opencart.webp">
+<meta property="og:image:secure_url" content="https://theendinfotech.com/img/integrating-e-commerce-platforms-shopify-vs-opencart.webp">
+<meta property="twitter:image" content="https://theendinfotech.com/img/integrating-e-commerce-platforms-shopify-vs-opencart.webp">
+        <meta property="og:image:width" content="964">
+        <meta property="og:image:height" content="555">
+        <meta property="og:image:alt" content="Integrating E-commerce Platforms: Shopify vs. OpenCart">
+        <meta property="og:image:type" content="image/webp">
+        
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Integrating E-commerce Platforms: Shopify vs. OpenCart">
+    <meta name="twitter:description" content="Compare Shopify vs OpenCart integrations and discover which e‑commerce platform best fits your business needs, features, scalability, and workflow.">
+    <link rel="canonical" href="index.htm">
+
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <link href="../../css/main.css" rel="stylesheet" type="text/css">
+    <link rel="preload" href="../../fonts/Onest-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="../../fonts/TwidGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+<style type="text/css">
+    @font-face {
+        font-family: "Onest-VariableFont_wght";
+        src: url("../../fonts/Onest-VariableFont_wght.woff2") format("woff2");
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: "TwidGrotesk Regular";
+        src: url("../../fonts/TwidGrotesk-Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    body {
+        font-family: "Onest-VariableFont_wght";
+    }
+</style>
+
+<style>
+/* Hide bottom mobile bar and blur container */
+.bt-panel, .blur-container { display: none !important; }
+</style>
+</head>
+
+<body>
+    <div id="loader-wrapper"></div>
+    <div id="content-block" class="main-wrapper">
+        <header>
+    <div class="h-wrap">
+        <div class="container">
+            <div class="h-inner">
+                <a class="h-logo" href="../../index.htm" aria-label="Company logo">
+                    <div style="display:flex;flex-direction:column;line-height:1.1">
+                        <span style="font-size:22px;font-weight:800;letter-spacing:-0.5px;color:#fff"><span style="color:#E70000">.</span>THE END</span>
+                        <span style="font-size:10px;font-weight:500;letter-spacing:3px;color:rgba(255,255,255,0.6);text-transform:uppercase;margin-left:6px">INFOTECH</span>
+                    </div>
+
+                </a>
+
+                <div class="h-menu">
+                    <nav class="h-links">
+                        <ul>
+                            <li>
+                                <div class="h-drop-link" data-id="projects">
+                                    <a href="../../portfolio/index.htm">Portfolio</a>
+                                    <div class="h-drop-btn"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="h-drop-link" data-id="services">
+                                    <a href="../../services/index.htm">Services</a>
+                                    <div class="h-drop-btn"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="h-drop-link" data-id="technologies">
+                                    <a href="../../technologies/index.htm">Technologies</a>
+                                    <div class="h-drop-btn"></div>
+                                </div>
+                            </li>
+                            <li><a href="../../about/index.htm">About</a></li>
+                            <li><a href="../../awards/index.htm">Awards & Reviews</a></li>
+                            <li><a href="../index.htm">Blog</a></li>
+                            <li><a href="../../contacts/index.htm">Contact Us</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="btn btn-s btn-primary h-btn open-popup" data-rel="popup-form">
+                        <div class="btn-text">Let's talk</div>
+                        <div class="btn-icon">
+                            <svg width="24" height="24">
+                                <use xlink:href="/img/icons/icons_global.svg#arrow-left" fill="none"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-burger js_open_menu"><i></i></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="h-menu-overlay"></div>
+</header>
+
+<div class="h-drop-menu" data-id="projects">
+    <div class="container">
+        <div class="h-drop-menu-wrap">
+            <!-- Next Block HIDE (width <= 1200) -->
+            <div class="h-drop-menu-header">
+                <div class="h4 title">Portfolio</div>
+
+                <div class="text text-xs">We develop online stores, CRM systems, SaaS platforms, and apps — integrating AI into processes and solutions.</div>
+
+                <div class="h-drop-client">
+                    <a href="#" target="_blank">
+                        <img width="52" height="52" src="../../img/client-logo-1.svg" alt="Client Logo" loading="lazy">
+                    </a>
+
+                    <div class="rate-block">
+                        <div class="rate">
+                            <img width="24" height="24" src="../../img/icons/star.svg" alt="Icon" loading="lazy">
+                            <span>5.0</span>
+                        </div>
+                        <div class="text text-xs">150+ Clients</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-btn-back"></div>
+
+            <nav class="h-drop-links">
+                <div class="h-drop-links-item">
+                    <div class="h-drop-caption">
+                        <a href="../../portfolio/index.htm">All Projects</a>
+                    </div>
+                </div>
+                <div class="h-drop-links-item">
+                    <div class="h-drop-caption">
+                        <a href="../../portfolio/new-projects/index.htm">New projects</a>
+                    </div>
+                </div>
+                <div class="h-drop-links-item">
+                    <div class="h-drop-caption">
+                        <a href="../../portfolio/creative/index.htm">Creative</a>
+                    </div>
+                </div>
+                <div class="h-drop-links-item">
+                    <div class="h-drop-caption">
+                        <a href="../../portfolio/real-estate/index.htm">Real estate</a>
+                    </div>
+                </div>
+                <div class="h-drop-links-item">
+                    <div class="h-drop-caption">
+                        <a href="../../portfolio/marketing-corporate/index.htm">Marketing / Corporate</a>
+                    </div>
+                </div>
+                <div class="h-drop-links-item">
+                    <div class="h-drop-caption">
+                        <a href="../../portfolio/landing-page/index.htm">Landing page</a>
+                    </div>
+                </div>
+                <div class="h-drop-links-item">
+                    <div class="h-drop-caption">
+                        <a href="../../portfolio/online-store/index.htm">Online store</a>
+                    </div>
+                </div>
+                <div class="h-drop-links-item">
+                    <div class="h-drop-caption">
+                        <a href="../../portfolio/food-delivery/index.htm">Food delivery</a>
+                    </div>
+                </div>
+                <div class="h-drop-links-item">
+                    <div class="h-drop-caption">
+                        <a href="../../portfolio/dentistry/index.htm">Dentistry</a>
+                    </div>
+                </div>
+                <div class="h-drop-links-item">
+                    <div class="h-drop-caption">
+                        <a href="../../portfolio/manufacturers/index.htm">Manufacturers</a>
+                    </div>
+                </div>
+                <!--<div class="h-drop-links-item">
+                    <div class="h-drop-caption">
+                        <a href="/portfolio/finance/">Finance</a>
+                    </div>
+                </div>-->
+                <div class="h-drop-links-item">
+                    <div class="h-drop-caption">
+                        <a href="../../portfolio/branding/index.htm">Branding</a>
+                    </div>
+                </div>
+                <!--<div class="h-drop-links-item">
+                    <div class="h-drop-caption">
+                        <a href="/portfolio/auto/">Auto</a>
+                    </div>
+                </div>-->
+                <div class="h-drop-links-item">
+                    <div class="h-drop-caption">
+                        <a href="../../portfolio/web/index.htm">Web solution</a>
+                    </div>
+                </div>
+                <div class="h-drop-links-item">
+                    <div class="h-drop-caption">
+                        <a href="../../portfolio/entertainment-leisure/index.htm">Entertainment/Leisure</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Next Block HIDE (width <= 1200) -->
+        <a class="h-drop-project" href="https://wishflowers.co/">
+            <div class="h4 title">New project</div>
+            <div class="h-drop-project-img">
+                <picture>
+                    <source srcset="../../img/wish-flowers-prev.webp" type="image/webp">
+                    <source srcset="/img/wish-flowers-prev.png" type="image/png">
+                    <img width="300" height="360" src="#" alt="Project Image" loading="lazy">
+                </picture>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="h-drop-menu" data-id="services">
+    <div class="container">
+        <div class="h-drop-menu-wrap">
+            <!-- Next Block HIDE (width <= 1200) -->
+            <div class="h-drop-menu-header">
+                <div class="h4 title">Services</div>
+
+                <div class="text text-xs">We develop online stores, CRM systems, SaaS platforms, and apps — integrating AI into processes and solutions.</div>
+
+                <div class="h-drop-client">
+                    <a href="#" target="_blank">
+                        <img width="52" height="52" src="../../img/client-logo-1.svg" alt="Client Logo" loading="lazy">
+                    </a>
+
+                    <div class="rate-block">
+                        <div class="rate">
+                            <img width="24" height="24" src="../../img/icons/star.svg" alt="Icon" loading="lazy">
+                            <span>5.0</span>
+                        </div>
+                        <div class="text text-xs">150+ Clients</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-btn-back"></div>
+
+            <nav class="h-drop-links">
+                <div class="h-drop-links-item" data-sub-id="create-sites">
+                    <div class="h-drop-caption">
+                        <a href="../../services/website-development/index.htm">Website development</a>
+                        <div class="h-drop-caption-btn"></div>
+                    </div>
+
+                    <div class="h-drop-links-menu">
+                        <div class="h-btn-back"></div>
+                        <ul>
+                            <!--<li><a href="/services/angular/">Angular Website Development</a></li>
+                            <li><a href="/services/laravel/">Laravel Website Development</a></li>
+                            <li><a href="/services/nodejs/">Node.js Website Development</a></li>
+                            <li><a href="/services/react/">React Website Development</a></li>
+                            <li><a href="/services/vuejs/">Vue.js Website Development</a></li>
+                            <li><a href="/services/wordpress/">WordPress Website Development</a></li>-->
+
+                            <li><a href="../../services/landing-page/index.htm">Landing page</a></li>
+                            <li><a href="../../services/e-commerce/index.htm">E-commerce Website Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="h-drop-links-item" data-sub-id="branding-design">
+                    <div class="h-drop-caption">
+                        <a href="../../services/branding/index.htm">Web Design</a>
+                        <div class="h-drop-caption-btn"></div>
+                    </div>
+
+                    <div class="h-drop-links-menu">
+                        <div class="h-btn-back"></div>
+                        <ul>
+
+                            <!--<li><a href="/services/landing-page/">Landing Page Design</a></li>
+                            <li><a href="/services/online-store/">E-commerce Website Design</a></li>
+                            <li><a href="/services/design-from-scratch/">Website Design from Scratch</a></li>-->
+                            <li><a href="../../services/ui-ux/index.htm">UI/UX Design</a></li>
+                            <li> <a href="../../services/redesign/index.htm">Redesign</a></li>
+                            <li><a href="../../services/logo/index.htm">Logo</a></li>
+                            <li><a href="../../services/online-store/index.htm">E-commerce Design</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--<div class="h-drop-links-item" data-sub-id="crm-systems">
+                    <div class="h-drop-caption">
+                        <a href="/services/crm-system/">CRM system</a>
+                        <div class="h-drop-caption-btn"></div>
+                    </div>
+
+                    <div class="h-drop-links-menu">
+                        <div class="h-btn-back"></div>
+                        <ul>
+                            <li><a href="/services/crm-system-development-for-the-automotive-business/">Automotive business</a></li>
+                            <li><a href="/services/crm-system-development-for-real-estate-agencies/">Real Estate Agency</a></li>
+                            <li><a href="/services/crm-system-development-for-an-outsourcing-company/">Outsourcing Company</a></li>
+                            <li><a href="/services/crm-system-development-for-a-construction-company/">Building company</a></li>
+                            <li><a href="/services/crm-system-development-for-customer-database-management/">Client Database Management</a></li>
+                            <li><a href="/services/crm-system-development-for-manufacturing/">Manufacturing</a></li>
+                        </ul>
+                        <a class="h-drop-tag" href="/services/">24+ Categories</a>
+                    </div>
+                </div>-->
+                <!--<div class="h-drop-links-item" data-sub-id="app-development">
+                    <div class="h-drop-caption">
+                        <a href="/services/online-store/">E-commerce</a>
+                        <div class="h-drop-caption-btn"></div>
+                    </div>
+
+                    <div class="h-drop-links-menu">
+                        <div class="h-btn-back"></div>
+
+                        <ul>
+                            <li><a href="/services/e-commerce/">E-commerce Website Development</a></li>
+                            <li><a href="/services/opencart/">OpenCart Website Development</a></li>
+                            <li><a href="/services/shopify/">Shopify Website Development</a></li>
+                        </ul>
+                    </div>
+                </div>-->
+                <div class="h-drop-links-item" data-sub-id="integration">
+                    <div class="h-drop-caption">
+                        <a href="../../services/app-development/index.htm">Mobile Application development</a>
+                        <div class="h-drop-caption-btn"></div>
+                    </div>
+
+                    <div class="h-drop-links-menu">
+                        <div class="h-btn-back"></div>
+                        <ul>
+                            <li><a href="../../services/android/index.htm">Android Apps</a></li>
+                            <li><a href="../../services/ios/index.htm">iOS Apps</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="h-drop-links-item">
+                    <!--<div class="h-drop-caption">
+                        <a href="/services/landing-page/">Landing page</a>
+                    </div>-->
+                    <div class="h-drop-caption">
+                        <a href="../../services/crm-system/index.htm">CRM system</a>
+                        <div class="h-drop-caption-btn"></div>
+                    </div>
+                    <div class="h-drop-caption">
+                        <a href="../../services/site-support/index.htm">Website support</a>
+                    </div>
+                    <!--<div class="h-drop-caption">
+                        <a href="/services/redesign/">Redesign</a>
+                    </div>-->
+                    <div class="h-drop-caption">
+                        <a href="../../services/seo/index.htm">Search engine optimisation</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Next Block HIDE (width <= 1200) -->
+        <a class="h-drop-project" href="https://wishflowers.co/">
+            <div class="h4 title">New Project</div>
+            <div class="h-drop-project-img">
+                <picture>
+                    <source srcset="../../img/wish-flowers-prev.webp" type="image/webp">
+                    <source srcset="/img/wish-flowers-prev.png" type="image/png">
+                    <img width="300" height="360" src="#" alt="Project Image" loading="lazy">
+                </picture>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="h-drop-menu" data-id="technologies">
+    <div class="container">
+        <div class="h-drop-menu-wrap">
+            <!-- Next Block HIDE (width <= 1200) -->
+            <div class="h-drop-menu-header">
+                <div class="h4 title">Technologies</div>
+
+                <div class="text text-xs">We develop online stores, CRM systems, SaaS platforms, and apps — integrating AI into processes and solutions.</div>
+
+                <div class="h-drop-client">
+                    <a href="#" target="_blank">
+                        <img width="52" height="52" src="../../img/client-logo-1.svg" alt="Client Logo" loading="lazy">
+                    </a>
+
+                    <div class="rate-block">
+                        <div class="rate">
+                            <img width="24" height="24" src="../../img/icons/star.svg" alt="Icon" loading="lazy">
+                            <span>5.0</span>
+                        </div>
+                        <div class="text text-xs">150+ Clients</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-btn-back"></div>
+
+            <nav class="h-drop-links">
+                <div class="h-drop-links-item" data-sub-id="all-technologies">
+                    <div class="h-drop-caption">
+                        <a href="../../technologies/index.htm">Technology Stack</a>
+                        <div class="h-drop-caption-btn"></div>
+                    </div>
+                    <div class="h-drop-links-menu">
+                        <div class="h-btn-back"></div>
+                        <ul>
+                            <li><a href="../../technologies/index.htm">Simple</a></li>
+                            <li><a href="../../technologies/index.htm">Middle</a></li>
+                            <li><a href="../../technologies/index.htm">Enterprise</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="h-drop-links-item" data-sub-id="digital-design">
+                    <div class="h-drop-caption">
+                        <a href="../../technologies/index.htm">Digital Design</a>
+                        <div class="h-drop-caption-btn"></div>
+                    </div>
+                    <div class="h-drop-links-menu">
+                        <div class="h-btn-back"></div>
+                        <ul>
+                            <li><a href="../../technologies/index.htm">Figma</a></li>
+                            <li><a href="../../technologies/index.htm">Photoshop</a></li>
+                            <li><a href="../../technologies/index.htm">Illustrator</a></li>
+                            <li><a href="../../technologies/index.htm">Framer</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="h-drop-links-item" data-sub-id="frontend">
+                    <div class="h-drop-caption">
+                        <a href="../../technologies/index.htm">Frontend</a>
+                        <div class="h-drop-caption-btn"></div>
+                    </div>
+                    <div class="h-drop-links-menu">
+                        <div class="h-btn-back"></div>
+                        <ul>
+                            <li><a href="../../technologies/index.htm">React</a></li>
+                            <li><a href="../../technologies/index.htm">Angular</a></li>
+                            <li><a href="../../technologies/index.htm">Vue.js</a></li>
+                            <li><a href="../../technologies/index.htm">Flutter</a></li>
+                        </ul>
+                        <a class="h-drop-tag" href="../../technologies/index.htm">6+ technologies</a>
+                    </div>
+                </div>
+                <div class="h-drop-links-item" data-sub-id="backend">
+                    <div class="h-drop-caption">
+                        <a href="../../technologies/index.htm">Backend</a>
+                        <div class="h-drop-caption-btn"></div>
+                    </div>
+                    <div class="h-drop-links-menu">
+                        <div class="h-btn-back"></div>
+                        <ul>
+                            <li><a href="../../technologies/index.htm">Python</a></li>
+                            <li><a href="../../technologies/index.htm">Node</a></li>
+                            <li><a href="../../technologies/index.htm">Laravel</a></li>
+                            <li><a href="../../technologies/index.htm">PHP</a></li>
+                        </ul>
+                        <a class="h-drop-tag" href="../../technologies/index.htm">6+ technologies</a>
+                    </div>
+                </div>
+                <div class="h-drop-links-item" data-sub-id="devops">
+                    <div class="h-drop-caption">
+                        <a href="../../technologies/index.htm">DevOps</a>
+                        <div class="h-drop-caption-btn"></div>
+                    </div>
+                    <div class="h-drop-links-menu">
+                        <div class="h-btn-back"></div>
+                        <ul>
+                            <li><a href="../../technologies/index.htm">AWS</a></li>
+                            <li><a href="../../technologies/index.htm">Firebase</a></li>
+                            <li><a href="../../technologies/index.htm">GCP</a></li>
+                            <li><a href="../../technologies/index.htm">Azure</a></li>
+                        </ul>
+                        <a class="h-drop-tag" href="../../technologies/index.htm">6+ technologies</a>
+                    </div>
+                </div>
+                <div class="h-drop-links-item">
+                    <div class="h-drop-caption">
+                        <a href="../../technologies/index.htm">Database</a>
+                    </div>
+                    <div class="h-drop-caption">
+                        <a href="../../technologies/index.htm">Cloud</a>
+                    </div>
+                    <div class="h-drop-caption">
+                        <a href="../../technologies/index.htm">Mobile apps</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Next Block HIDE (width <= 1200) -->
+        <a class="h-drop-project" href="https://wishflowers.co/">
+            <div class="h4 title">New Project</div>
+            <div class="h-drop-project-img">
+                <picture>
+                    <source srcset="../../img/wish-flowers-prev.webp" type="image/webp">
+                    <source srcset="/img/wish-flowers-prev.png" type="image/png">
+                    <img width="300" height="360" src="#" alt="Project Image" loading="lazy">
+                </picture>
+            </div>
+        </a>
+    </div>
+</div>        <main>
+            <div class="breadcrumbs">
+    <div class="container">
+        <ul itemscope="" itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                <meta itemprop="name" content="THE END INFOTECH">
+                <a href="../../index.htm" itemprop="item"><span>Home</span></a>
+                <meta itemprop="position" content="1">
+            </li>
+                            <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                <a href="../index.htm" itemprop="item">                        <span itemprop="name">Blog</span>
+                    </a>
+                    <meta itemprop="position" content="2">
+                </li>
+            
+                            <li class="is-active" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">Integrating E-commerce Platforms: Shopify vs. OpenCart</span>
+                    <meta itemprop="position" content="3">
+                </li>
+                    </ul>
+    </div>
+</div>
+
+
+<div class="section">
+    <div class="container">
+        <div class="blog-date mb-xxs slideUp">01.03.2025</div>
+        <h1 class="h1 title mb-lg text-animate">Integrating E-commerce Platforms: Shopify vs. OpenCart</h1>
+
+        <div class="blog-detail">
+            <div class="text">
+                <p>Choosing the right e-commerce platform is crucial for businesses looking to establish or expand their online presence. Two popular options, Shopify and OpenCart, offer distinct advantages and cater to different business needs. In this article, we compare these platforms to help businesses make an informed decision.</p>
+<h5>1. Ease of Use</h5>
+<ul>
+<li><b>Shopify:</b> A fully hosted, user-friendly platform that requires no technical expertise. Its drag-and-drop interface allows users to set up an online store quickly.</li>
+<li><b>OpenCart:</b> An open-source solution that offers flexibility but requires some technical knowledge for installation, customization, and maintenance.</li>
+</ul>
+<h5>2. Customization &amp; Flexibility</h5>
+<ul>
+<li><b>Shopify:</b> Provides a wide range of customizable themes and apps but operates within a closed ecosystem, limiting deep code modifications.</li>
+<li><b>OpenCart:</b> Allows complete customization since it’s open-source, making it ideal for developers who want full control over their store’s functionality.</li>
+</ul>
+<h5>3. Cost &amp; Pricing</h5>
+<ul>
+<li><b>Shopify:</b> Operates on a subscription model, starting at $29 per month. Additional costs may arise from premium themes, apps, and transaction fees if not using Shopify Payments.</li>
+<li><b>OpenCart:</b> Free to download and use, but costs may come from hosting, domain registration, third-party extensions, and development support.</li>
+</ul>
+<h5>4. Features &amp; Scalability</h5>
+<ul>
+<li><b>Shopify:</b> Offers built-in SEO tools, marketing integrations, and an extensive app store. It’s scalable but best suited for small to medium-sized businesses.</li>
+<li><b>OpenCart:</b> Supports multiple stores, custom product options, and extensive extensions. However, scalability depends on hosting and technical optimizations.</li>
+</ul>
+<h5>5. Payment Options</h5>
+<ul>
+<li><b>Shopify:</b> Supports numerous payment gateways, including Shopify Payments, which eliminates transaction fees.</li>
+<li><b>OpenCart:</b> Offers flexibility with multiple payment gateways, but setup may require additional configuration and third-party modules.</li>
+</ul>
+<h5>6. Security &amp; Maintenance</h5>
+<ul>
+<li><b>Shopify:</b> Fully hosted with automatic security updates, SSL certificates, and PCI compliance.</li>
+<li><b>OpenCart:</b> Requires manual security updates and SSL installation, making security management the store owner’s responsibility.</li>
+</ul>
+<h5>7. Support &amp; Community</h5>
+<ul>
+<li><b>Shopify:</b> Provides 24/7 customer support via chat, email, and phone.</li>
+<li><b>OpenCart:</b> Relies on community forums, documentation, and third-party developers for support.</li>
+</ul>
+<p><b>Choose Shopify</b> if you want a hassle-free, fully managed solution with built-in security and support. <b>Choose OpenCart</b> if you need a cost-effective, highly customizable platform and have the technical expertise to manage it.</p>
+<p>Both platforms have their strengths, so the choice ultimately depends on your business needs, technical skills, and budget.</p>
+<p>Need help choosing the right platform and integrating it into your business? Contact <b>THE END INFOTECH</b> for expert consultation and tailored e-commerce solutions!</p>
+            </div>
+
+            <div class="blog-detail-panel">
+                <a class="btn btn-s btn-third" href="../index.htm">
+                    <div class="btn-text">Back</div>                    <div class="btn-icon">
+                        <svg width="24" height="24">
+                            <use xlink:href="/img/icons/icons_global.svg#arrow-left" fill="none"></use>
+                        </svg>
+                    </div>
+                </a>
+
+                                    <ul class="blog-tags">
+                                                    <li>#<a href="../integrations/index.htm">Integrations</a></li>
+                                            </ul>
+                
+                                    <div class="blog-author">
+                        <div class="blog-author-info">
+                            <div class="blog-author-caption">Author</div>                            <div class="h6 blog-author-name"><a href="../../author/liliia-tkachenko/index.htm">Liliia Tkachenko</a></div>                        </div>
+                    </div>
+                                
+                
+                <div class="social">
+                    <div class="text text-sm">Share</div>                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/theendinfotech.com/" target="_blank" aria-label="instagram">
+                                <img width="20" height="20" src="../../img/icons/icon-instagram.svg" alt="Icon Instagram" loading="lazy">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../login/index.htm" target="_blank" aria-label="facebook">
+                                <img width="20" height="20" src="../../img/icons/icon-facebook.svg" alt="Icon Facebook" loading="lazy">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.behance.net/unionhello2d78" target="_blank" aria-label="behance">
+                                <img width="20" height="20" src="../../img/icons/icon-behance.svg" alt="Icon Behance" loading="lazy">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://dribbble.com/THE END INFOTECH" target="_blank" aria-label="dribbble">
+                                <img width="20" height="20" src="../../img/icons/icon-dribbble.svg" alt="Icon Dribbble" loading="lazy">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- THIS SECTION hide (width <= 1200) -->
+<div class="section customer-section">
+    <div class="container">
+        <div class="customer-block col-xl-10 mx-auto text-center">
+            <div class="headline text-animate">
+                <div class="headline-word">Let’s</div>
+                <div class="headline-word">Move</div>
+                <div class="headline-media">
+                    <div class="video video-present">
+                        <video muted="" playsinline="" loop="" preload="" poster="../../img/banner-video-replacement.svg" src="#" data-src="" data-src-mob=""></video>
+                    </div>
+                </div>
+                <div class="headline-word">the World</div>
+                <div class="headline-word">Together</div>
+            </div>
+
+            <div class="slideUp">
+                <div class="btn btn-l btn-primary open-popup" data-rel="popup-form">
+                    <div class="btn-text">Become a Client</div>
+                    <div class="btn-icon">
+                        <svg width="24" height="24">
+                            <use xlink:href="/img/icons/icons_global.svg#arrow-left" fill="none"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="section">
+    <div class="container">
+        <div class="blog-block">
+            <h2 class="h2 title col-xl-7 text-animate">Related articles</h2>
+            <div class="blog-grid animate" data-animate='{"target": ".slideAnim", "delay":200}'>
+                
+<article class="blog-card slideAnim animated">
+    <a class="blog-media" href="../incorporating-video-content-in-web-design-copy/index.htm">
+        <picture><source srcset="../../img/incorporating-video-content-in-web-design-616x480.webp" type="image/webp"><source srcset="../../img/incorporating-video-content-in-web-design-616x480.webp" type="image/jpeg"><img src="#" loading="lazy" alt="Blog Image"></picture><ul class="blog-tags"><li>#Design</li></ul>    </a>
+    <div class="blog-info">
+        <div class="blog-date">22.01.2026</div>
+        <h4><a class="h4 blog-title" href="../incorporating-video-content-in-web-design-copy/index.htm">Incorporating Video Content in Web Design Copy</a></h4>
+    </div>
+
+    <a class="btn btn-s btn-third" href="../incorporating-video-content-in-web-design-copy/index.htm">
+        <div class="btn-text">Read the article</div>
+        <div class="btn-icon">
+            <svg width="24" height="24">
+                <use xlink:href="/img/icons/icons_global.svg#arrow-left" fill="none"></use>
+            </svg>
+        </div>
+    </a>
+</article>
+
+
+<article class="blog-card slideAnim animated">
+    <a class="blog-media" href="../how-to-properly-transition-your-website-from-http-to-https/index.htm">
+        <picture><source srcset="../../img/how-to-properly-transition-your-website-from-http-to-https-616x480.webp" type="image/webp"><source srcset="../../img/how-to-properly-transition-your-website-from-http-to-https-616x480.webp" type="image/jpeg"><img src="#" loading="lazy" alt="Blog Image"></picture><ul class="blog-tags"><li>#Security</li></ul>    </a>
+    <div class="blog-info">
+        <div class="blog-date">16.03.2025</div>
+        <h4><a class="h4 blog-title" href="../how-to-properly-transition-your-website-from-http-to-https/index.htm">How to Properly Transition Your Website from HTTP to HTTPS: A Step-by-Step Guide</a></h4>
+    </div>
+
+    <a class="btn btn-s btn-third" href="../how-to-properly-transition-your-website-from-http-to-https/index.htm">
+        <div class="btn-text">Read the article</div>
+        <div class="btn-icon">
+            <svg width="24" height="24">
+                <use xlink:href="/img/icons/icons_global.svg#arrow-left" fill="none"></use>
+            </svg>
+        </div>
+    </a>
+</article>
+
+
+<article class="blog-card slideAnim animated">
+    <a class="blog-media" href="../why-businesses-should-switch-to-a-custom-crm-system/index.htm">
+        <picture><source srcset="../../img/why-businesses-should-switch-to-a-custom-crm-system-616x480.webp" type="image/webp"><source srcset="../../img/why-businesses-should-switch-to-a-custom-crm-system-616x480.webp" type="image/jpeg"><img src="#" loading="lazy" alt="Blog Image"></picture><ul class="blog-tags"><li>#CRM</li></ul>    </a>
+    <div class="blog-info">
+        <div class="blog-date">10.03.2025</div>
+        <h4><a class="h4 blog-title" href="../why-businesses-should-switch-to-a-custom-crm-system/index.htm">Why Businesses Should Switch to a Custom CRM System</a></h4>
+    </div>
+
+    <a class="btn btn-s btn-third" href="../why-businesses-should-switch-to-a-custom-crm-system/index.htm">
+        <div class="btn-text">Read the article</div>
+        <div class="btn-icon">
+            <svg width="24" height="24">
+                <use xlink:href="/img/icons/icons_global.svg#arrow-left" fill="none"></use>
+            </svg>
+        </div>
+    </a>
+</article>
+
+            </div>
+
+            <div class="slideUp">
+                <a class="btn btn-m btn-primary" href="../index.htm">
+                    <div class="btn-text">Show more articles</div>
+                    <div class="btn-icon">
+                        <svg width="24" height="24">
+                            <use xlink:href="/img/icons/icons_global.svg#arrow-left" fill="none"></use>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div></main> 
+        <div class="blur-container">
+    <div class="blur"></div>
+    <div class="blur"></div>
+    <div class="blur"></div>
+    <div class="blur"></div>
+    <div class="blur"></div>
+    <div class="blur"></div>
+</div>    <!-- Button Panel hide (width <= 1200) -->
+<div class="btn-panel">
+    <div class="btn-social-panel">
+        <div class="social">
+            <a href="https://www.instagram.com/theendinfotech.com/" target="_blank" aria-label="instagram">
+                <img width="20" height="20" src="../../img/icons/icon-instagram.svg" alt="Icon Instagram" loading="lazy">
+            </a>
+            <a href="viber://chat/?number=%2B380676075784" target="_blank" aria-label="viber">
+                <img width="20" height="20" src="../../img/icons/icon-viber.svg" alt="Icon Viber" loading="lazy">
+            </a>
+            <a href="https://t.me/+380676075784" target="_blank" aria-label="telegram">
+                <img width="20" height="20" src="../../img/icons/icon-telegram.svg" alt="Icon Telegram" loading="lazy">
+            </a>
+            <a href="https://wa.me/+380676075784" target="_blank" aria-label="whatsapp">
+                <img width="20" height="20" src="../../img/icons/icon-whatsapp.svg" alt="Icon WhatsApp" loading="lazy">
+            </a>
+            <a href="http://m.me/THE END INFOTECHAGENCY" target="_blank" aria-label="messenger">
+                <img width="20" height="20" src="../../img/icons/icon-messenger.svg" alt="Icon Messenger" loading="lazy">
+            </a>
+        </div>
+
+        <div class="btn-loading">
+            <span class="btn-loading-dot"></span>
+            <span class="btn-loading-dot"></span>
+            <span class="btn-loading-dot"></span>
+        </div>
+    </div>
+
+    <div class="btn-phone">
+        <div class="btn-phone-info">
+            <img width="48" height="48" src="../../img/icons/client-logo-1.svg" alt="The End Infotech Icon" loading="lazy">
+
+            <div class="btn-phone-text">
+                <div class="text">Call</div>
+                <div class="title">THE END INFOTECH Manager</div>
+            </div>
+        </div>
+
+        <a href="tel:+91 98765 43210" class="btn-phone-link" aria-label="Зателефонувати менеджеру THE END INFOTECH">
+            <svg width="24" height="24">
+                <use xlink:href="/img/icons/icons_global.svg#phone" fill="none"></use>
+            </svg>
+        </a>
+    </div>
+</div>    <footer>
+    <div class="container">
+        <div class="footer-grid">
+            <nav class="footer-links">
+                <div class="footer-links-item">
+                    <a class="footer-link" href="../../portfolio/index.htm">Portfolio <span class="footer-arrow" type="button" aria-label="Toggle submenu"></span></a>
+                    <ul>
+                        <li><a href="../../portfolio/new-projects/index.htm">New projects</a></li>
+                        <li><a href="../../portfolio/creative/index.htm">Creative</a></li>
+                        <li><a href="../../portfolio/real-estate/index.htm">Real estate</a></li>
+                        <li><a href="../../portfolio/marketing-corporate/index.htm">Marketing / Corporate</a></li>
+                        <li><a href="../../portfolio/landing-page/index.htm">Landing page</a></li>
+                        <li><a href="../../portfolio/online-store/index.htm">Online store</a></li>
+                        <li><a href="../../portfolio/food-delivery/index.htm">Food delivery</a></li>
+                        <li><a href="../../portfolio/dentistry/index.htm">Dentistry</a></li>
+                        <li><a href="../../portfolio/manufacturers/index.htm">Manufacturers</a></li>
+                        <li><a href="../../portfolio/branding/index.htm">Branding</a></li>
+                        <li><a href="../../portfolio/web/index.htm">Web solution</a></li>
+                        <li><a href="../../portfolio/entertainment-leisure/index.htm">Entertainment / Leisure</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-item">
+                    <a class="footer-link" href="../../services/index.htm">Services <span class="footer-arrow" type="button" aria-label="Toggle submenu"></span></a>
+                    <ul>
+                        <li><a href="../../services/website-development/index.htm">Website development</a></li>
+                        <li><a href="../../services/branding/index.htm">Branding and design</a></li>
+                        <li><a href="../../services/crm-system/index.htm">CRM system</a></li>
+                        <li><a href="../../services/online-store/index.htm">E-commerce</a></li>
+                        <li><a href="../../services/landing-page/index.htm">Landing page</a></li>
+                        <li><a href="../../services/site-support/index.htm">Website support</a></li>
+                        <li><a href="../../services/redesign/index.htm">Redesign</a></li>
+                        <li><a href="../../services/app-development/index.htm">Application development</a></li>
+                        <li><a href="../../services/seo/index.htm">Search engine optimisation</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <nav class="footer-links">
+                <div class="footer-links-item">
+                    <a class="footer-link is-active" href="../../about/index.htm">About</a>
+                    <a class="footer-link" href="../../awards/index.htm">Awards</a>
+                    <a class="footer-link" href="https://www.awwwards.com/THE END INFOTECH/">Reviews</a>
+                    <a class="footer-link" href="../index.htm">Blog</a>
+                    <a class="footer-link" href="../../contacts/index.htm">Contact Us</a>
+                </div>
+
+                <div class="footer-links-item">
+
+                    <div class="footer-langs">
+                        <a class="footer-link" href="https://theendinfotech.com/"><!--UA--></a>
+                        <a class="footer-link is-active" href="../../index.htm">EN</a>
+                    </div>
+
+                    <a class="footer-link" href="https://g.co/kgs/51tuSiQ" target="_blank">
+                    <span itemprop="streetAddress">31 NE 17th St</span>, <span itemprop="addressLocality">City</span>, FL 33132, India
+                    </a>
+                    <a class="footer-link" href="tel:+91 98765 43210">
+                        <span itemprop="telephone">+91 98765 43210</span>
+                    </a>
+                </div>
+            </nav>
+
+            <div class="footer-contact">
+                <div class="h3 title">Interested in <br> cooperation?</div>
+
+                <a href="mailto:office@theendinfotech.com">
+                    <span itemprop="email">office@theendinfotech.com</span>
+                </a>
+                <a href="mailto:support@theendinfotech.com">
+                    <span itemprop="email">support@theendinfotech.com</span>
+                </a>
+            </div>
+
+            <div class="footer-item">
+                <a href="#form" class="btn btn-xl btn-secondary open-popup btn-xl-style-mob" data-rel="popup-form">
+                    <div class="btn-text">Let’s begin</div>
+                    <div class="btn-icon">
+                        <svg width="24" height="24">
+                            <use xlink:href="/img/icons/icons_global.svg#arrow-left" fill="none"></use>
+                        </svg>
+                    </div>
+                </a>
+                <a class="footer-media" href="../../portfolio/index.htm">
+                    <img width="1770" height="380" src="../../img/web-gallery.gif" alt="Gif Image" loading="lazy">
+                </a>
+            </div>
+
+            <div class="social">
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/theendinfotech.com/" target="_blank" aria-label="instagram">
+                            <img width="20" height="20" src="../../img/icons/icon-instagram.svg" alt="Icon Instagram" loading="lazy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../login/index.htm" target="_blank" aria-label="facebook">
+                            <img width="20" height="20" src="../../img/icons/icon-facebook.svg" alt="Icon Facebook" loading="lazy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.behance.net/unionhello2d78" target="_blank" aria-label="behance">
+                            <img width="20" height="20" src="../../img/icons/icon-behance.svg" alt="Icon Behance" loading="lazy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://dribbble.com/THE END INFOTECH" target="_blank" aria-label="dribbble">
+                            <img width="20" height="20" src="../../img/icons/icon-dribbble.svg" alt="Icon Dribbble" loading="lazy">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-copy">
+                <p>@ 2026 All rights reserved</p>
+                <a href="../../privacy/index.htm">Privacy Policy</a>
+            </div>
+
+            <div class="footer-logo">
+                <div style="overflow:hidden;padding:1rem 0">
+                    <span style="font-family:var(--ff-2);font-size:clamp(4rem,2rem+10vw,12rem);line-height:0.9;font-weight:800;text-transform:uppercase;color:#fff;white-space:nowrap;display:block;user-select:none;letter-spacing:-0.02em"><span style="color:#E70000">.</span>THE END</span>
+                    <span style="font-family:var(--ff-2);font-size:clamp(1.5rem,1rem+3vw,4rem);line-height:1.2;font-weight:400;text-transform:uppercase;color:rgba(255,255,255,0.4);white-space:nowrap;display:block;user-select:none;letter-spacing:0.3em;margin-left:0.5rem">INFOTECH</span>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="../../gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+<script type='text/javascript'>
+  window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='https://web-sdk.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', '9426c81f8a8e376d6a98f818e2478c9b45af53cb', { region: 'eu' });
+</script>    <div class="cursor">
+    <span class="play">
+        Play
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 23 32" fill="none">
+            <path d="M3.30534e-07 0.396484L22.6033 15.9997L-3.71556e-06 31.603L3.30534e-07 0.396484Z" fill="#020202"></path>
+        </svg>
+    </span>
+
+    <span class="muted">
+        Muted
+        <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24.0005 8.91844L22.8336 7.70947L19.8625 10.7876L16.8915 7.70947L15.7246 8.91844L18.6956 11.9966L15.7246 15.0748L16.8915 16.2838L19.8625 13.2056L22.8336 16.2838L24.0005 15.0748L21.0294 11.9966L24.0005 8.91844Z" fill="#020202"></path>
+            <path d="M13.2414 24C13.1319 23.9995 13.0236 23.9765 12.9227 23.9324C12.8218 23.8882 12.7304 23.8237 12.6538 23.7428L6.34759 17.1406H0.827586C0.608094 17.1406 0.397589 17.0502 0.2424 16.8894C0.0871946 16.7287 0 16.5106 0 16.2832V7.7089C0 7.48152 0.0871946 7.26342 0.2424 7.10262C0.397589 6.94182 0.608094 6.85148 0.827586 6.85148H6.34759L12.6538 0.249322C12.8089 0.0896351 13.0186 0 13.2372 0C13.4559 0 13.6656 0.0896351 13.8207 0.249322C13.9766 0.407636 14.0659 0.623364 14.069 0.849518V23.1426C14.069 23.37 13.9818 23.5881 13.8266 23.7488C13.6714 23.9096 13.4609 24 13.2414 24Z" fill="#020202"></path>
+        </svg>
+    </span>
+
+    <span class="unmuted">
+        Unmuted
+        <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.5654 5.21143L20.2539 6.31714C21.6012 7.91309 22.3195 9.94606 22.2737 12.0341C22.2279 14.1222 21.4214 16.1217 20.0054 17.6572L21.2654 18.8572C22.9656 17.0147 23.9345 14.6147 23.9897 12.1082C24.0449 9.60168 23.1828 7.16129 21.5654 5.24571V5.21143Z" fill="#020202"></path>
+            <path d="M16.7832 8.57153C17.5913 9.52985 18.0216 10.7503 17.9933 12.0036C17.9648 13.2568 17.4797 14.4566 16.6289 15.3773L17.8889 16.543C19.0227 15.3141 19.6687 13.7133 19.705 12.0417C19.7412 10.37 19.1655 8.74272 18.086 7.46582L16.7832 8.57153Z" fill="#020202"></path>
+            <path d="M13.7143 23.9995C13.6009 23.999 13.4887 23.976 13.3842 23.9319C13.2798 23.8877 13.1851 23.8232 13.1057 23.7423L6.57429 17.1423H0.857143C0.629811 17.1423 0.411789 17.052 0.251057 16.8912C0.0903087 16.7306 0 16.5125 0 16.2852V7.71371C0 7.48639 0.0903087 7.26837 0.251057 7.10762C0.411789 6.94687 0.629811 6.85656 0.857143 6.85656H6.57429L13.1057 0.256564C13.2663 0.09693 13.4836 0.00732422 13.71 0.00732422C13.9364 0.00732422 14.1537 0.09693 14.3143 0.256564C14.4758 0.414827 14.5682 0.630484 14.5714 0.856564V23.1423C14.5714 23.3696 14.4811 23.5877 14.3204 23.7483C14.1596 23.9091 13.9416 23.9995 13.7143 23.9995Z" fill="#020202"></path>
+        </svg>
+    </span>
+
+    <span class="link">
+        Link
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 56 56" fill="none">
+            <path d="M49.2731 28.0988L5.00035 28.0988" stroke="#020202" stroke-width="2" stroke-linecap="square"></path>
+            <path d="M31.9492 8.84961L51.1982 28.0986L31.9492 47.3476" stroke="#020202" stroke-width="2" stroke-linecap="square"></path>
+        </svg>
+    </span>
+
+    <span class="drag">
+        Drag
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 56 56" fill="none">
+            <path d="M49.2731 28.0988L5.00035 28.0988" stroke="#020202" stroke-width="2" stroke-linecap="square"></path>
+            <path d="M31.9492 8.84961L51.1982 28.0986L31.9492 47.3476" stroke="#020202" stroke-width="2" stroke-linecap="square"></path>
+        </svg>
+    </span>
+</div>
+    </div>
+
+
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://theendinfotech.com/blog/integrating-e-commerce-platforms-shopify-vs-opencart"
+    },
+    "headline": "Integrating E-commerce Platforms: Shopify vs. OpenCart",
+    "description": "Choosing the right e-commerce platform is crucial for businesses looking to establish or expand their online presence. Two popular options, Shopify and OpenCart, offer distinct advantages and cater to different business needs. In this article, we compare these platforms to help businesses make an informed decision. 1. Ease of Use Shopify: A fully hosted, user-friendly platform that requires no technical expertise. Its drag-and-drop interface allows users to set up an online store quickly. OpenCart: An open-source solution that offers flexibility but requires some technical knowledge for installation, customization, and maintenance. 2. Customization &amp; Flexibility Shopify: Provides a wide range of [&hellip;]",
+    "datePublished": "2025-03-01",
+    "dateModified": "2026-02-09",
+    "author": {
+        "@type": "Person",
+        "name": "Liliia Tkachenko"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "https://theendinfotech.com/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://theendinfotech.com/img/logo.svg"
+        }
+    }
+}</script>
+    <div class="popup-wrapper" id="popups"></div>
+
+    <link href="../../css/vendors/bootstrap-grid.css" rel="stylesheet" type="text/css">
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+<link href="../../css/shared_file_css.css" rel="stylesheet" type="text/css">
+<link href="../../css/custom_lang_css.css" rel="stylesheet" type="text/css">
+<script defer="" src="../../js/app-global.js"></script>
+<script defer="" src="../../js/app-rest.js"></script>
+<div class="bt-panel">
+    <div class="bt-menu-wrap">
+        <div class="bt-menu">
+            <div class="bt-menu-item js_open_menu">
+                <div class="h-burger "><i></i></div>
+            </div>
+            <!--<a class="bt-menu-item" href="https://calendly.com/" target="_blank">
+                <svg width="24" height="24">
+                    <use xlink:href="/img/icons/icons_panel.svg#calendar" fill="none"></use>
+                </svg>
+            </a>-->
+            <div class="bt-menu-item open-popup" data-rel="popup-form">
+                <svg width="24" height="24">
+                    <use xlink:href="/img/icons/icons_panel.svg#notebook" fill="none"></use>
+                </svg>
+            </div>
+            <a class="bt-menu-item" href="tel:+380676075784">
+                <svg width="24" height="24">
+                    <use xlink:href="/img/icons/icons_panel.svg#phone" fill="none"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="btn-social-panel">
+            <div class="social">
+                <a href="https://www.instagram.com/theendinfotech.com/" target="_blank" aria-label="instagram">
+                    <img width="20" height="20" src="../../img/icons/icon-instagram.svg" alt="Icon Instagram" loading="lazy">
+                </a>
+                <a href="https://www.viber.com/ua/" target="_blank" aria-label="viber">
+                    <img width="20" height="20" src="../../img/icons/icon-viber.svg" alt="Icon Viber" loading="lazy">
+                </a>
+                <a href="https://telegram.org/" target="_blank" aria-label="telegram">
+                    <img width="20" height="20" src="../../img/icons/icon-telegram.svg" alt="Icon Telegram" loading="lazy">
+                </a>
+                <a href="https://www.whatsapp.com/" target="_blank" aria-label="whatsapp">
+                    <img width="20" height="20" src="../../img/icons/icon-whatsapp.svg" alt="Icon WhatsApp" loading="lazy">
+                </a>
+                <a href="https://www.messenger.com/" target="_blank" aria-label="messenger">
+                    <img width="20" height="20" src="../../img/icons/icon-messenger.svg" alt="Icon Messenger" loading="lazy">
+                </a>
+            </div>
+
+            <div class="btn-loading">
+                <span class="btn-loading-dot"></span>
+                <span class="btn-loading-dot"></span>
+                <span class="btn-loading-dot"></span>
+            </div>
+        </div>
+    </div>
+</div>    <link href="../../css/form-style.css" rel="stylesheet" type="text/css">
+<script defer="" src="../../js/app-form.js"></script>
+</body>
+</html>
