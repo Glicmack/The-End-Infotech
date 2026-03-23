@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/",
-        destination: "/site/index.html",
+        destination: "/site/index.htm",
         permanent: false,
       },
     ];

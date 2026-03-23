@@ -562,8 +562,9 @@
             </div>
         </div>
     </div>
-<div class="section sec-100vh small-video-section">
-    <div class="container">
+<div class="section sec-100vh small-video-section" style="position:relative">
+    <canvas class="anim-canvas" data-anim="hero-grid" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.4"></canvas>
+    <div class="container" style="position:relative;z-index:1">
         <div class="headline text-animate">
             <h2 class="headline-word">SAAS. APP.</h2>            
                             <div class="headline-media" id="headline-media">
@@ -861,8 +862,9 @@
         </div>
     </div>
  
-    <div class="section">
-        <div class="container">
+    <div class="section" style="position:relative">
+        <canvas class="anim-canvas" data-anim="floating-dots" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.3"></canvas>
+        <div class="container" style="position:relative;z-index:1">
             <h2 class="h1 title col-xl-10 mb-md text-animate">SERVICES</h2>            <div class="service-block mob-ver2 animate" data-animate='{"target": ".slideAnim", "delay":200}'>
                                  
                     <div class="service-card slideAnim">
@@ -1511,8 +1513,9 @@
         </div>
     </div>
 </div>
-    <div class="section">
-        <div class="container">
+    <div class="section" style="position:relative">
+        <canvas class="anim-canvas" data-anim="matrix-rain" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.15"></canvas>
+        <div class="container" style="position:relative;z-index:1">
             <div class="tech-block">
                 <h2 class="h2 title text-animate">Our Technologies</h2>
                 <div class="tech-card-wrap animate" data-animate='{"target": ".slideAnim", "delay":200}'>
@@ -1613,8 +1616,9 @@
 
 <div class="section form-section" style="display: none;"></div>
 
-    <div class="section customer-section">
-        <div class="container">
+    <div class="section customer-section" style="position:relative">
+        <canvas class="anim-canvas" data-anim="wave" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.25"></canvas>
+        <div class="container" style="position:relative;z-index:1">
             <div class="customer-block col-xl-10 mx-auto text-center">
                 <div class="headline text-animate">
                     <div class="headline-word">Let’s Move </div>                                            <div class="headline-media">
@@ -1639,21 +1643,22 @@
     </div>
     <div class="section">
         <div class="container">
-            <div class="faq-block slideUp">
-                                <div class="cta-card js_move_block">
-                        <img width="110" height="110" src="img/icons/logo-circle.svg" alt="Icon The End Infotech" loading="lazy">
-                        <div class="h3 title">Let&#039;s talk</div>                        <div class="btn btn-m btn-primary h-btn open-popup" data-rel="popup-form" bis_skin_checked="1">
-                            <div class="btn-text">Book a Call</div>
+            <div class="faq-block slideUp" style="position:relative">
+                <canvas class="anim-canvas" data-anim="particles" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;grid-column:1/-1;grid-row:1/-1"></canvas>
+                                <div class="cta-card js_move_block" style="position:relative;z-index:1">
+                            <img width="110" height="110" src="img/icons/logo-circle.svg" alt="Icon The End Infotech" loading="lazy">
+                            <div class="h3 title">Let&#039;s talk</div>
+                            <div class="btn btn-m btn-primary h-btn open-popup" data-rel="popup-form">
+                                <div class="btn-text">Book a Call</div>
                                 <div class="btn-icon">
                                     <svg width="24" height="24">
                                         <use xlink:href="/img/icons/icons_global.svg#arrow-left" fill="none"></use>
                                     </svg>
                                 </div>
                             </div>
-                        </div>
-                 
+                    </div>
 
-                <div class="faq-content">
+                <div class="faq-content" style="position:relative;z-index:1">
                                             <h2 class="h2 title mb-md col-xl-12 col-lg-10 text-animate">Frequently asked questions and answers</h2>
                     
                     <div class="accordion animate" data-animate='{"target": ".slideAnim", "delay":200}'>
@@ -2181,5 +2186,194 @@
     </div>
 </div>    <link href="css/form-style.css" rel="stylesheet" type="text/css">
 <script defer="" src="js/app-form.js"></script>
+<script>
+// === MASTER ANIMATION ENGINE ===
+(function(){
+const DPR = Math.min(window.devicePixelRatio, 2);
+
+function setupCanvas(canvas) {
+    const rect = canvas.parentElement.getBoundingClientRect();
+    canvas.width = rect.width * DPR;
+    canvas.height = rect.height * DPR;
+    const ctx = canvas.getContext('2d');
+    ctx.scale(DPR, DPR);
+    return { ctx, w: rect.width, h: rect.height };
+}
+
+// ---- HERO GRID: floating connected dots on dark bg ----
+document.querySelectorAll('[data-anim="hero-grid"]').forEach(canvas => {
+    let { ctx, w, h } = setupCanvas(canvas);
+    const dots = [];
+    for(let i = 0; i < 60; i++) dots.push({
+        x: Math.random()*w, y: Math.random()*h,
+        vx: (Math.random()-0.5)*0.6, vy: (Math.random()-0.5)*0.6,
+        r: Math.random()*2+0.8, phase: Math.random()*Math.PI*2
+    });
+    (function anim(){
+        ctx.clearRect(0,0,w,h);
+        dots.forEach(d => {
+            d.x += d.vx; d.y += d.vy; d.phase += 0.015;
+            if(d.x<0||d.x>w) d.vx*=-1;
+            if(d.y<0||d.y>h) d.vy*=-1;
+            const a = 0.4 + Math.sin(d.phase)*0.3;
+            ctx.beginPath(); ctx.arc(d.x,d.y,d.r,0,Math.PI*2);
+            ctx.fillStyle=`rgba(100,200,255,${a})`; ctx.fill();
+        });
+        for(let i=0;i<dots.length;i++) for(let j=i+1;j<dots.length;j++){
+            const dx=dots[i].x-dots[j].x, dy=dots[i].y-dots[j].y;
+            const dist=Math.sqrt(dx*dx+dy*dy);
+            if(dist<130){
+                ctx.beginPath(); ctx.moveTo(dots[i].x,dots[i].y);
+                ctx.lineTo(dots[j].x,dots[j].y);
+                ctx.strokeStyle=`rgba(100,200,255,${(1-dist/130)*0.2})`;
+                ctx.lineWidth=0.5; ctx.stroke();
+            }
+        }
+        requestAnimationFrame(anim);
+    })();
+});
+
+// ---- FLOATING DOTS: gentle particles for services ----
+document.querySelectorAll('[data-anim="floating-dots"]').forEach(canvas => {
+    let { ctx, w, h } = setupCanvas(canvas);
+    const pts = [];
+    for(let i=0;i<45;i++) pts.push({
+        x:Math.random()*w, y:Math.random()*h,
+        vx:(Math.random()-0.5)*0.3, vy:(Math.random()-0.5)*0.3,
+        r:Math.random()*2.5+0.5, phase:Math.random()*6.28
+    });
+    (function anim(){
+        ctx.clearRect(0,0,w,h);
+        pts.forEach(p => {
+            p.x+=p.vx; p.y+=p.vy; p.phase+=0.01;
+            if(p.x<0||p.x>w) p.vx*=-1;
+            if(p.y<0||p.y>h) p.vy*=-1;
+            const glow = 0.5+Math.sin(p.phase)*0.3;
+            ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+            ctx.fillStyle=`rgba(255,255,255,${glow*0.4})`;
+            ctx.shadowColor='rgba(255,255,255,0.3)'; ctx.shadowBlur=6;
+            ctx.fill(); ctx.shadowBlur=0;
+        });
+        for(let i=0;i<pts.length;i++) for(let j=i+1;j<pts.length;j++){
+            const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y;
+            const d=Math.sqrt(dx*dx+dy*dy);
+            if(d<100){
+                ctx.beginPath(); ctx.moveTo(pts[i].x,pts[i].y); ctx.lineTo(pts[j].x,pts[j].y);
+                ctx.strokeStyle=`rgba(255,255,255,${(1-d/100)*0.12})`;
+                ctx.lineWidth=0.4; ctx.stroke();
+            }
+        }
+        requestAnimationFrame(anim);
+    })();
+});
+
+// ---- MATRIX RAIN: falling code chars for tech section ----
+document.querySelectorAll('[data-anim="matrix-rain"]').forEach(canvas => {
+    let { ctx, w, h } = setupCanvas(canvas);
+    const chars = '01{}[]<>/=;:()#@$%&*ABCDEFabcdef';
+    const cols = Math.floor(w/18);
+    const drops = new Array(cols).fill(0).map(() => Math.random()*-100);
+    (function anim(){
+        ctx.fillStyle='rgba(0,0,0,0.06)'; ctx.fillRect(0,0,w,h);
+        ctx.font='13px monospace';
+        for(let i=0;i<cols;i++){
+            const ch = chars[Math.floor(Math.random()*chars.length)];
+            const bright = Math.random();
+            ctx.fillStyle = bright>0.95 ? 'rgba(120,255,200,0.9)' : `rgba(80,200,160,${0.3+bright*0.4})`;
+            ctx.fillText(ch, i*18, drops[i]*18);
+            drops[i] += 0.4 + Math.random()*0.3;
+            if(drops[i]*18 > h && Math.random()>0.975) drops[i]=0;
+        }
+        requestAnimationFrame(anim);
+    })();
+});
+
+// ---- WAVE: flowing sine wave for "Let's Move" section ----
+document.querySelectorAll('[data-anim="wave"]').forEach(canvas => {
+    let { ctx, w, h } = setupCanvas(canvas);
+    let t = 0;
+    (function anim(){
+        ctx.clearRect(0,0,w,h);
+        for(let wave=0;wave<4;wave++){
+            ctx.beginPath();
+            const amp = 25 + wave*12;
+            const freq = 0.008 - wave*0.001;
+            const speed = 0.02 + wave*0.005;
+            const yOff = h*0.5 + wave*30 - 45;
+            for(let x=0;x<=w;x+=2){
+                const y = yOff + Math.sin(x*freq + t*speed)*amp + Math.sin(x*freq*2.3 + t*speed*1.5)*amp*0.3;
+                if(x===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+            }
+            const alpha = 0.15 - wave*0.03;
+            ctx.strokeStyle=`rgba(100,220,255,${alpha})`;
+            ctx.lineWidth = 1.5 - wave*0.2;
+            ctx.stroke();
+        }
+        // Floating orbs
+        for(let i=0;i<8;i++){
+            const ox = (w*0.1 + i*w*0.11 + Math.sin(t*0.01+i)*40) % w;
+            const oy = h*0.3 + Math.sin(t*0.015+i*1.5)*h*0.2;
+            const or = 2 + Math.sin(t*0.02+i)*1;
+            ctx.beginPath(); ctx.arc(ox,oy,or,0,Math.PI*2);
+            ctx.fillStyle=`rgba(120,240,255,${0.3+Math.sin(t*0.02+i)*0.2})`;
+            ctx.shadowColor='rgba(100,220,255,0.5)'; ctx.shadowBlur=10;
+            ctx.fill(); ctx.shadowBlur=0;
+        }
+        t++;
+        requestAnimationFrame(anim);
+    })();
+});
+
+// ---- PARTICLES: network particles for CTA card ----
+document.querySelectorAll('[data-anim="particles"]').forEach(canvas => {
+    let { ctx, w, h } = setupCanvas(canvas);
+    const pts = [];
+    for(let i=0;i<50;i++) pts.push({
+        x:Math.random()*w, y:Math.random()*h,
+        vx:(Math.random()-0.5)*0.5, vy:(Math.random()-0.5)*0.5,
+        r:Math.random()*2.5+0.8, phase:Math.random()*6.28
+    });
+    canvas.parentElement.addEventListener('mousemove', e => {
+        const rect = canvas.parentElement.getBoundingClientRect();
+        const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+        pts.forEach(p => {
+            const dx=p.x-mx, dy=p.y-my, d=Math.sqrt(dx*dx+dy*dy);
+            if(d<80){p.vx+=dx/d*0.4; p.vy+=dy/d*0.4;}
+        });
+    });
+    (function anim(){
+        ctx.clearRect(0,0,w,h);
+        pts.forEach(p => {
+            p.x+=p.vx; p.y+=p.vy; p.phase+=0.02;
+            p.vx*=0.99; p.vy*=0.99;
+            if(p.x<0||p.x>w) p.vx*=-1;
+            if(p.y<0||p.y>h) p.vy*=-1;
+            const a = 0.5+Math.sin(p.phase)*0.3;
+            ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+            ctx.fillStyle=`rgba(120,240,220,${a})`;
+            ctx.shadowColor='rgba(100,255,220,0.5)'; ctx.shadowBlur=8;
+            ctx.fill(); ctx.shadowBlur=0;
+        });
+        for(let i=0;i<pts.length;i++) for(let j=i+1;j<pts.length;j++){
+            const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y;
+            const d=Math.sqrt(dx*dx+dy*dy);
+            if(d<110){
+                ctx.beginPath(); ctx.moveTo(pts[i].x,pts[i].y); ctx.lineTo(pts[j].x,pts[j].y);
+                ctx.strokeStyle=`rgba(120,240,220,${(1-d/110)*0.25})`;
+                ctx.lineWidth=0.5; ctx.stroke();
+            }
+        }
+        requestAnimationFrame(anim);
+    })();
+});
+
+// Handle resize
+let resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => location.reload(), 300);
+});
+})();
+</script>
 </body>
 </html>
