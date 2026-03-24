@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /login/
+Disallow: /gtag/
+
+Sitemap: https://the-end-infotech.vercel.app/site/sitemap.xml
