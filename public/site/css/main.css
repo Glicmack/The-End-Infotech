@@ -104,7 +104,7 @@ html {font-size: 2rem;}
 /*====================*/
 /*  Header            */
 /*====================*/
-:root {--h-height: 4.5rem;--h-logo-width: 10.625rem;}
+:root {--h-height: 4.5rem;--h-logo-width: 13.5rem;}
 header {position: relative;z-index: 100;height: var(--h-height);}
 .h-wrap {position: fixed;z-index: 100;top: 0;left: 0;width: 100%;transform: translateY(0);transition: transform 0.3s ease,opacity 0.3s ease;will-change: transform,opacity;opacity: 1;}
 .scrolled .h-wrap {will-change: auto;}
@@ -184,7 +184,7 @@ header.scrolled .h-inner {border-radius: 3rem;background-color: rgba(var(--rgb-b
 .header-step-5 .h-wrap {transform: translateY(calc(100vh - var(--h-height) - 2.5vh));}
 .header-bottom .h-inner {max-width: 90%;margin-inline: auto;border-radius: 3rem;border: 0.0625rem solid rgba(var(--rgb-white), 0.3);padding-inline: 2rem 0.75rem;}
 .header-bottom .h-inner:before {content: "";position: absolute;inset: 0;z-index: -1;border-radius: inherit;backdrop-filter: blur(1rem);background-color: rgba(var(--rgb-grey), 0.25);}
-.header-bottom .h-logo {--h-logo-width: 8.625rem;}
+.header-bottom .h-logo {--h-logo-width: 11rem;}
 .header-bottom .h-links ul {gap: 0.5vw 1.5vw;}
 body:has(header.header-bottom) .h-drop-menu {top: auto;bottom: calc(var(--h-height) + 2.5vh + 0.5rem);max-height: calc(100vh - var(--h-height) - 2.5vh - 0.5rem);}
 body:has(header.header-bottom) .h-drop-link:after {left: -50vw;width: 150vw;transform: translateY(-100%);}
@@ -203,7 +203,7 @@ body:has(header.header-bottom) .h-drop-link:after {left: -50vw;width: 150vw;tran
 body:has(header.scrolled) .blur-container {transform: translateY(0%);}
 }
 @media (max-width: 1199px) {
-:root {--h-height: 3rem;--h-logo-width: 7.75rem;}
+:root {--h-height: 3rem;--h-logo-width: 9.75rem;}
 .scrolled .h-wrap {transform: translateY(calc(var(--h-height) * -1));}
 .scrolled .h-menu {top: calc(var(--h-height) + 0.5rem);height: calc(100dvh - var(--h-height) - var(--bt-menu-height) + 1rem);}
 .scrolled ~ .h-drop-menu {top: 0.5rem;height: calc(100dvh - var(--h-height) - var(--bt-menu-height) + 1rem);}
