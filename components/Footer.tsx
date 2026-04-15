@@ -90,7 +90,6 @@ export default function Footer() {
             {[
               { name: "Instagram", icon: "/img/icons/icon-instagram.svg" },
               { name: "Facebook", icon: "/img/icons/icon-facebook.svg" },
-              { name: "Behance", icon: "/img/icons/icon-behance.svg" },
               { name: "Dribbble", icon: "/img/icons/icon-dribbble.svg" },
             ].map(({ name, icon }) => (
               <a key={name} href="#" className="social-icon" aria-label={name}>
