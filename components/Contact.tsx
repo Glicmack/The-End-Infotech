@@ -21,8 +21,8 @@ export default function Contact() {
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
             <span className="text-white/70 text-[0.875rem]">office@theendinfotech.com</span>
-            <span className="text-white/70 text-[0.875rem]">+91 98765 43210</span>
-            <span className="text-white/70 text-[0.875rem]">India</span>
+            <span className="text-white/70 text-[0.875rem]">+91 89808 85714</span>
+            <span className="text-white/70 text-[0.875rem]">Surat, Gujarat</span>
           </div>
         </motion.div>
       </div>

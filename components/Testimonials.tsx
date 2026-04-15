@@ -26,21 +26,16 @@ export default function Testimonials() {
         {/* Client logos marquee - circles 5rem */}
         <div className="relative overflow-hidden mb-[clamp(2rem,-0.5263rem+5.2632vw,5rem)]">
           <div className="marquee-track flex items-center gap-6 whitespace-nowrap w-max">
-            {[...Array(4), ...Array(4), ...Array(4), ...Array(4)].map((_, i) => {
-              const awardIndex = (i % 4) + 1;
-              return (
-                <div
-                  key={i}
-                  className="w-[5rem] h-[5rem] lg:w-[7.5rem] lg:h-[7.5rem] rounded-full overflow-hidden bg-gradient-to-b from-[#1a1a1a] to-[#0a0a0a] border border-white/5 flex items-center justify-center flex-shrink-0"
-                >
-                  <img
-                    src={`/img/icons/awards${awardIndex}.webp`}
-                    alt={`Award ${awardIndex}`}
-                    className="w-full h-full object-contain p-2"
-                  />
-                </div>
-              );
-            })}
+            {[...clientLogos, ...clientLogos, ...clientLogos, ...clientLogos].map((logo, i) => (
+              <div
+                key={i}
+                className="w-[5rem] h-[5rem] lg:w-[7.5rem] lg:h-[7.5rem] rounded-full overflow-hidden bg-gradient-to-b from-[#1a1a1a] to-[#0a0a0a] border border-white/5 flex items-center justify-center flex-shrink-0"
+              >
+                <span className="text-white/60 font-display text-[1.25rem] lg:text-[1.75rem] font-bold tracking-wider">
+                  {logo.initial}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
 

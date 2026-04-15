@@ -167,7 +167,7 @@ export const testimonials: Testimonial[] = [
       "THE END INFOTECH delivered an exceptional website representing our business and services. The site was user-friendly, visually appealing, and well-planned. The team's responsibility and cooperation in meeting all requirements with precision were remarkable.",
     name: "Priya Sharma",
     role: "Marketing Specialist",
-    company: "TechVentures India",
+    company: "TechVentures",
     rating: 5,
   },
   {
