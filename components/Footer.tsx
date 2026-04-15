@@ -72,8 +72,9 @@ export default function Footer() {
             <a href="#contact" className="text-white/70 text-[0.8125rem] uppercase hover:text-white transition-colors link-hover">Contact Us</a>
           </div>
           <div className="text-right">
-            <p className="text-white/50 text-[0.8125rem]">India</p>
-            <p className="text-white/50 text-[0.8125rem]">+91 98765 43210</p>
+            <p className="text-white/50 text-[0.8125rem]">9th floor, KBC Karunesh Business Centre, 916, Yogi Chowk Rd,</p>
+            <p className="text-white/50 text-[0.8125rem]">Yogi Chowk Ground, Chikuwadi, Nana Varachha, Surat, Gujarat 395010</p>
+            <p className="text-white/50 text-[0.8125rem] mt-1">+91 89808 85714</p>
           </div>
         </div>
       </div>
