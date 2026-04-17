@@ -1498,7 +1498,16 @@
         </div>
     </div>
 <div class="section" style="position:relative;overflow:hidden;">
-    <iframe src="ai-3d.html" title="myFrame" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;z-index:0;pointer-events:all;"></iframe>
+    <iframe src="ai-3d.html" title="myFrame" allowfullscreen="" class="ai-3d-iframe" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;z-index:0;"></iframe>
+    <style>
+      /* Desktop: iframe catches mouse for head rotation.
+         Mobile: iframe ignores touch so the page can scroll naturally
+         (the 3D head still renders, just not mouse-interactive on touch). */
+      .ai-3d-iframe { pointer-events: none; }
+      @media (hover: hover) and (pointer: fine) {
+        .ai-3d-iframe { pointer-events: auto; }
+      }
+    </style>
     <div class="container" style="position:relative;z-index:1;pointer-events:none;">
         <div class="ai-block">
             <div class="ai-media">
@@ -2379,11 +2388,19 @@ document.querySelectorAll('[data-anim="particles"]').forEach(canvas => {
     })();
 });
 
-// Handle resize
+// Handle resize — only reload on significant WIDTH change (ignore mobile
+// address-bar show/hide which only changes height and used to cause
+// constant auto-refreshes on phones)
 let resizeTimer;
+let lastWidth = window.innerWidth;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => location.reload(), 300);
+    resizeTimer = setTimeout(() => {
+        if (Math.abs(window.innerWidth - lastWidth) > 50) {
+            lastWidth = window.innerWidth;
+            location.reload();
+        }
+    }, 500);
 });
 })();
 </script>
