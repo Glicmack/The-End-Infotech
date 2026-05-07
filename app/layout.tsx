@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 
-const GA_MEASUREMENT_IDS = ["G-K75JLZF63B", "G-HX0QNYHKXD"] as const;
+const GA_MEASUREMENT_IDS = ["G-HX0QNYHKXD"] as const;
 
 export const metadata: Metadata = {
   title: "Custom CRM, Design, App & Web Development | THE END INFOTECH",
