@@ -27,20 +27,30 @@ export default function RootLayout({
   return (
     <html lang="en" className="antialiased">
       <head>
-        {/* Google tag (gtag.js) — single loader, multiple GA4 properties */}
-        <Script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_IDS[0]}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            ${GA_MEASUREMENT_IDS.map((id) => `gtag('config', '${id}');`).join("\n            ")}
-          `}
-        </Script>
+        {/* Google tag (gtag.js) — separate literal block per GA4 property,
+            matching the snippet format the GA admin UI tells you to paste. */}
+        {GA_MEASUREMENT_IDS.map((id) => (
+          <Script
+            key={`gtag-loader-${id}`}
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
+            strategy="afterInteractive"
+          />
+        ))}
+        {GA_MEASUREMENT_IDS.map((id) => (
+          <Script
+            key={`gtag-config-${id}`}
+            id={`gtag-config-${id}`}
+            strategy="afterInteractive"
+          >
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${id}');
+            `}
+          </Script>
+        ))}
       </head>
       <body>{children}</body>
     </html>
