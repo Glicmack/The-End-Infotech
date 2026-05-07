@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 
-const GA_MEASUREMENT_ID = "G-K75JLZF63B";
+const GA_MEASUREMENT_IDS = ["G-K75JLZF63B", "G-HX0QNYHKXD"] as const;
 
 export const metadata: Metadata = {
   title: "Custom CRM, Design, App & Web Development | THE END INFOTECH",
@@ -27,10 +27,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="antialiased">
       <head>
-        {/* Google tag (gtag.js) */}
+        {/* Google tag (gtag.js) — single loader, multiple GA4 properties */}
         <Script
           async
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_IDS[0]}`}
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -38,7 +38,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
+            ${GA_MEASUREMENT_IDS.map((id) => `gtag('config', '${id}');`).join("\n            ")}
           `}
         </Script>
       </head>
