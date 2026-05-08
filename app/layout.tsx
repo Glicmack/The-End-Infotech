@@ -51,6 +51,11 @@ export default function RootLayout({
             `}
           </Script>
         ))}
+        {/* Popunder ad — Profitable CPM Rate Network */}
+        <Script
+          src="https://pl29373936.profitablecpmratenetwork.com/28/d0/b4/28d0b4a9eb2745514fba694d0f11c00e.js"
+          strategy="afterInteractive"
+        />
       </head>
       <body>{children}</body>
     </html>
